@@ -10,6 +10,13 @@ const routes: Routes = [
       )
   },
   {
+    path: 'browser-tools-bug',
+    loadChildren: () =>
+      import('./browser-tools-bug/browser-tools-bug.module').then(
+        mod => mod.BrowserToolsBugModule
+      )
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'
