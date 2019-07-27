@@ -17,6 +17,11 @@ const routes: Routes = [
       )
   },
   {
+    path: 'pipe-bug',
+    loadChildren: () =>
+      import('./pipe-bug/pipe-bug.module').then(mod => mod.PipeBugModule)
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'

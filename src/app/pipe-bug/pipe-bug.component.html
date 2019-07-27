@@ -1,0 +1,9 @@
+<span>All the Star Wars Titles:</span>
+
+<ul>
+  <li *ngFor="let films of (starWarsFilms | async).results">
+    {{ films.title }}
+  </li>
+</ul>
+
+<span>Credit to the <a href="https://swapi.co/">SWAPI</a> for this data.</span>
