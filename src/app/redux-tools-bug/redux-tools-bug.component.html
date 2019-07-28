@@ -1,0 +1,17 @@
+<span>Number of Todos: {{ (todos$ | async)?.todos.length }}</span>
+
+<ul>
+  <li *ngFor="let todo of (todos$ | async)?.todos">
+    <span>{{ todo.title }}</span>
+    <input type="checkbox" [checked]="todo.done" (change)="complete(todo)" />
+    <button (click)="remove(todo)">X</button>
+  </li>
+
+  <button (click)="reset()">Reset</button>
+</ul>
+
+<form #todoForm="ngForm" (ngSubmit)="add()">
+  <input type="text" name="newTodoTitle" [(ngModel)]="newTodoTitle" />
+
+  <button type="submit">Add</button>
+</form>

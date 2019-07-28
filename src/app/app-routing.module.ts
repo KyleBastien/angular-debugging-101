@@ -22,6 +22,13 @@ const routes: Routes = [
       import('./pipe-bug/pipe-bug.module').then(mod => mod.PipeBugModule)
   },
   {
+    path: 'redux-tools-bug',
+    loadChildren: () =>
+      import('./redux-tools-bug/redux-tools-bug.module').then(
+        mod => mod.ReduxToolsBugModule
+      )
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'
