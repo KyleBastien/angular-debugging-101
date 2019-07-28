@@ -39,10 +39,7 @@ export const todosReducer = createReducer(
       .indexOf(todo.title);
 
     const newTodos = state.todos.slice(0);
-    newTodos[todoIndex] = {
-      ...newTodos[todoIndex],
-      done: !newTodos[todoIndex].done
-    };
+    newTodos[todoIndex].done = !newTodos[todoIndex].done;
 
     return {
       ...state,

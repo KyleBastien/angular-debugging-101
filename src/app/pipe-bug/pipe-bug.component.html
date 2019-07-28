@@ -1,7 +1,7 @@
 <span>All the Star Wars Titles:</span>
 
 <ul>
-  <li *ngFor="let film of (starWarsFilms | async)?.results">
+  <li *ngFor="let film of starWarsFilms | async">
     {{ film.title }}
   </li>
 </ul>
