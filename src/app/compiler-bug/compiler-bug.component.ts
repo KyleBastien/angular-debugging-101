@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./compiler-bug.component.scss']
 })
 export class CompilerBugComponent implements OnInit {
-  public womenToDisplay = [
+  public awesomeWomenInTech = [
     {
       name: 'Ada Lovelace'
     },
